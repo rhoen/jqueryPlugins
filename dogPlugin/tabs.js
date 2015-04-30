@@ -8,16 +8,30 @@ $.Tabs = function (el) {
 };
 
 $.Tabs.prototype.clickTab = function(event) {
-  event.preventDefault();
-  this.$activeTab.removeClass("active-pane");
-  this.$activeLink.removeClass("active-link");
+  if (this.transitioning) {
+    return;
+  }
 
+  this.transitioning = true;
+
+  event.preventDefault();
+
+
+  this.$activeLink.removeClass("active-link");
   this.$activeLink = $(event.currentTarget);
   this.$activeLink.addClass("active-link");
 
   var tabName = this.$activeLink.attr('href');
-  this.$activeTab = $(this.$contentTabs.find(tabName));
-  this.$activeTab.addClass("active-pane");
+  var $newActiveTab = $(this.$contentTabs.find(tabName));
+
+  this.$activeTab.removeClass("active-pane");
+  this.$activeTab.addClass("transitioning");
+  this.$activeTab.one("transitionend", function(){
+    this.transitioning = false;
+    this.$activeTab.removeClass("transitioning");
+    this.$activeTab = $newActiveTab;
+    this.$activeTab.addClass("active-pane");
+  }.bind(this));
 };
 
 

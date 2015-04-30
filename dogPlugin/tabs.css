@@ -46,6 +46,7 @@ body {
 
 .tab-pane {
   display: none;
+  transition: opacity 500ms;
 }
 
 
@@ -65,4 +66,9 @@ body {
   height: 300px;
   width: 440px;
   margin: auto;
+}
+
+.transitioning {
+  display: block;
+  opacity: 0;
 }
