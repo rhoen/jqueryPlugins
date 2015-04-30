@@ -46,11 +46,12 @@ ul {
   background: yellow;
   width: 100%;
   height: 100%;
-
+  transition: left 500ms linear;
 }
 
 .items .active {
   display: block;
+  left: 0%;
 }
 
 img {
@@ -81,4 +82,12 @@ img {
 }
 .carousel a:hover{
   background: yellow;
+}
+
+.items .left {
+  left: 95%;
+}
+
+.items .right {
+  left: -95%;
 }
