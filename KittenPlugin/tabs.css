@@ -23,16 +23,22 @@ ul {
 .carousel {
   margin: auto;
   width: 200px;
+  height: 220px;
   border: 5px solid black;
   border-radius: 5px;
   overflow:hidden;
-
 }
 
 .carousel li {
-  float: left;
   width: 200px;
   height: 200px;
+  position:absolute;
+  top: 20px;
+  display: none;
+}
+
+.items .active {
+  display: block;
 }
 
 img {
@@ -42,5 +48,5 @@ img {
 
 .items {
   display: block;
-  width: 1500px;
+  position: relative;
 }
