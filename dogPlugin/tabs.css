@@ -1,4 +1,4 @@
-html, body, figure, ul, li, section {
+html, body, figure, ul, li, section, a{
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,6 +25,24 @@ body {
   font-size: 16px;
 }
 
+.tabs {
+  margin: auto;
+  width: 440px;
+  background: #ccc;
+  padding: 20px;
+}
+
+.tabs > li {
+  display: block;
+  float: left;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.tabs > li:hover {
+  background: orange;
+}
 
 .tab-pane {
   display: none;
@@ -32,11 +50,19 @@ body {
 
 
 .active-link {
-  display: block;
+  color: red;
+  background: yellow;
 }
-
-
 
 .active-pane {
   display: block;
+}
+
+.content {
+  background: purple;
+  color: white;
+  padding: 20px;
+  height: 300px;
+  width: 440px;
+  margin: auto;
 }
