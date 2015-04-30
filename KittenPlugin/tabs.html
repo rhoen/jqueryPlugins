@@ -9,31 +9,36 @@
 
   <body>
     <section class="carousel">
-    <ul class="items group">
-      <li class="active">
-        <img src="http://placecorgi.com/200/196" class="corgi" />
-      </li>
-      <li>
-        <img src="http://placecorgi.com/200/197" class="corgi" />
-      </li>
-      <li>
-        <img src="http://placecorgi.com/200/198" class="corgi" />
-      </li>
-      <li>
-        <img src="http://placecorgi.com/200/199" class="corgi" />
-      </li>
-      <li>
-        <img src="http://placecorgi.com/200/200" class="corgi" />
-      </li>
-    </ul>
+      <ul class="items group">
+        <li class="active">
+          <img src="http://placecorgi.com/300/296" class="corgi" />
+        </li>
+        <li>
+          <img src="http://placecorgi.com/300/297" class="corgi" />
+        </li>
+        <li>
+          <img src="http://placecorgi.com/300/298" class="corgi" />
+        </li>
+        <li>
+          <img src="http://placecorgi.com/300/299" class="corgi" />
+        </li>
+        <li>
+          <img src="http://placecorgi.com/300/300" class="corgi" />
+        </li>
+      </ul>
 
-    <script>
-      
-    </script
 
-    <a href="javascript:void(0)" class="slide-right">Prev</a>
-    <a href="javascript:void(0)" class="slide-left">Next</a>
-  </section>
+      <nav class="nav group">
+        <a href="javascript:void(0)" class="slide-right">Prev</a>
+        <a href="javascript:void(0)" class="slide-left">Next</a>
+      </nav>
+    </section>
+
+  <script>
+    $(function() {
+      $('.carousel').carousel();
+    })
+  </script>
 
   </body>
 </html>
