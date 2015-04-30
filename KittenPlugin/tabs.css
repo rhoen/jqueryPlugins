@@ -1,4 +1,4 @@
-html, body, figure, ul, li {
+html, body, figure, ul, li, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,4 +18,29 @@ ul {
   content: "";
   display: block;
   clear: both;
+}
+
+.carousel {
+  margin: auto;
+  width: 200px;
+  border: 5px solid black;
+  border-radius: 5px;
+  overflow:hidden;
+
+}
+
+.carousel li {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.items {
+  display: block;
+  width: 1500px;
 }
