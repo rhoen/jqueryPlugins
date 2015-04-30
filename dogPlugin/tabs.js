@@ -27,10 +27,14 @@ $.Tabs.prototype.clickTab = function(event) {
   this.$activeTab.removeClass("active-pane");
   this.$activeTab.addClass("transitioning");
   this.$activeTab.one("transitionend", function(){
-    this.transitioning = false;
     this.$activeTab.removeClass("transitioning");
     this.$activeTab = $newActiveTab;
-    this.$activeTab.addClass("active-pane");
+    this.$activeTab.addClass("transitioning");
+    setTimeout(function() {
+      this.$activeTab.removeClass("transitioning");
+      this.$activeTab.addClass("active-pane");
+      this.transitioning = false;
+    }.bind(this))
   }.bind(this));
 };
 

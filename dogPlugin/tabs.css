@@ -35,13 +35,18 @@ body {
 .tabs > li {
   display: block;
   float: left;
-  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .tabs > li:hover {
   background: orange;
+}
+
+.tabs > li > a {
+  display: block;
+  padding: 10px;
 }
 
 .tab-pane {
