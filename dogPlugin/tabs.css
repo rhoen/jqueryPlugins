@@ -1,4 +1,4 @@
-html, body, figure, ul, li {
+html, body, figure, ul, li, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,4 +18,25 @@ ul {
   content: "";
   display: block;
   clear: both;
+}
+
+body {
+  font: sans-serif;
+  font-size: 16px;
+}
+
+
+.tab-pane {
+  display: none;
+}
+
+
+.active-link {
+  display: block;
+}
+
+
+
+.active-pane {
+  display: block;
 }

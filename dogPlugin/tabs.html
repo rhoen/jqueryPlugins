@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>My Cool Website</title>
-    <script src="./jquery-1.11.1.js"></script>
+    <script src="./jquery-2.1.1.js"></script>
     <script src="./tabs.js"></script>
     <link href="./tabs.css" rel="stylesheet" type="text/css">
   </head>
@@ -10,7 +10,7 @@
   <body>
 
     <ul class="tabs" data-content-tabs="content-tabs">
-      <li> <a href="#husky">Husky</a> </li>
+      <li> <a class="active-link" href="#husky">Husky</a> </li>
       <li> <a href="#terrier">Terrier</a> </li>
       <li> <a href="#English-Bulldog">English-Bulldog</a> </li>
       <li> <a href="#Australian-Shepherd">Australian-Shepherd</a> </li>
@@ -18,7 +18,7 @@
     </ul>
 
     <figure id="content-tabs">
-      <section class="tab-pane" id="husky">
+      <section class="tab-pane active-pane" id="husky">
         <p>Some stuff about Huskies</p>
       </section>
       <section class="tab-pane" id="terrier">
